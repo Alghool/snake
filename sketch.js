@@ -55,7 +55,7 @@ function gameOver(){
         snake = new Snake();
         ready = true;
         redraw();
-    },3000);
+    },1000);
 }
 
 function addScore(){

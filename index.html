@@ -5,7 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>train</title>
+	<title>snake</title>
 
 	<script src="libraries/p5.js"></script>
 	<script src="libraries/p5.dom.js"></script>
@@ -15,18 +15,37 @@
 
 	<style>
 		body {
-			margin:0;
-			padding:0;
-			overflow: hidden;
+			text-align: center;
 		}
 		canvas {
 			margin:auto;
 		}
+		.click-me{
+			position: fixed;
+			top: 0;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			background-color: rgba(0, 98, 128, 0.32);
+			color: white;
+			padding-top: 200px;
+			font-size: 22px;
+			cursor: pointer;
+		}
 	</style>
 </head>
 <body>
-<h1>website is under construction meanwhile lets play snack </h1>
+<div class="click-me">
+	<h1>click me to start play</h1>
+</div>
 <p>Score: <span id="snake-score" >000000</span></p>
 <p>High score: <span id="high-score" >000000</span></p>
 </body>
+
+<script type="text/javascript" src="jquery.min.js"></script>
+<script>
+	$('.click-me').on('click', function(){
+		$('.click-me').remove();
+	});
+</script>
 </html>
